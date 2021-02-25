@@ -74,7 +74,6 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: true,
             ),
             ButtonBar(
-              // TODO: Add a beveled rectangular border to CANCEL (103)
               children: <Widget>[
                 TextButton(
                   child: Text('CANCEL'),
@@ -83,7 +82,6 @@ class _LoginPageState extends State<LoginPage> {
                     _passwordController.clear();
                   },
                 ),
-                // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: Text('NEXT'),
                   style: ElevatedButton.styleFrom(
