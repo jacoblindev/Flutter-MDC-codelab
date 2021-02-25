@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'supplemental/cut_corners_border.dart';
 
 import 'colors.dart';
 import 'login.dart';
@@ -45,11 +46,17 @@ ThemeData _buildShrineTheme() {
       style: ElevatedButton.styleFrom(
         primary: kShrinePink100,
         onPrimary: kShrineBrown900,
+        shape: BeveledRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(7.0)),
+        ),
       ),
     ),
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         primary: kShrineBrown900,
+        shape: BeveledRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(7.0)),
+        ),
       ),
     ),
     scaffoldBackgroundColor: kShrineBackgroundWhite,
@@ -69,7 +76,7 @@ ThemeData _buildShrineTheme() {
           color: kShrineBrown900,
         ),
       ),
-      border: OutlineInputBorder(),
+      border: CutCornersBorder(),
     ),
   );
 }
