@@ -61,13 +61,15 @@ class HomePage extends StatelessWidget {
     }).toList();
   }
 
-  // TODO: Add a variable for Category (104)
+  final Category category;
+
+  const HomePage({this.category: Category.all});
+
   @override
   Widget build(BuildContext context) {
     return AsymmetricView(
-      products: ProductsRepository.loadProducts(Category.all),
+      products: ProductsRepository.loadProducts(category),
     );
-    // TODO: Pass Category variable to AsymmetricView (104)
     // return Scaffold(
     //   appBar: AppBar(
     //     brightness: Brightness.dark,
